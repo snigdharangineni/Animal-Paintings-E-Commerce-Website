@@ -9,7 +9,7 @@ import { Product } from '../models/product';
 })
 export class ProductService {
 
-  private apiUrl = environment.apiUrl + "/producrs";
+  private apiUrl = environment.apiUrl + "/products";
   private products: Product[] = [];
 
   constructor(private http: HttpClient) { }
