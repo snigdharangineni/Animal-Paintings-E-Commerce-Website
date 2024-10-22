@@ -1,3 +1,8 @@
-.product-card {
-    max-width: 150px;
+
+.grid-container {
+    display: grid;
+    border: 1px solid white;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    justify-content: center;
 }
