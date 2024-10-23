@@ -8,6 +8,7 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./cart-view.component.css']
 })
 export class CartViewComponent implements OnInit{
+
   cartItems: Product[] = [];
   totalPrice: number = 0;
 
@@ -33,5 +34,9 @@ export class CartViewComponent implements OnInit{
 
   clearItems(): void{
     this.cartService.clearCart().subscribe();
+  }
+
+  checkout(): void{
+    this.cartService.checkout(this.cartItems).subscribe();
   }
 }
