@@ -30,4 +30,8 @@ export class CartViewComponent implements OnInit{
       }
     return total;
   }
+
+  clearItems(): void{
+    this.cartService.clearCart().subscribe();
+  }
 }
