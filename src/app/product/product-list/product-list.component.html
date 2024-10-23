@@ -1,7 +1,12 @@
 <div class = "container">
     <h2>Our latest Collection</h2>
+
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event)" placeholder = "search">
+    </mat-form-field>
+
     <div class = "grid-container">
-        <div *ngFor = "let product of products">
+        <div *ngFor = "let product of filtered">
             <mat-card class="product-card" appearance="outlined" (click)="addTocart(product)">
                 <img mat-card-image src="assets/images/{{product.image_url}}">
                 <mat-card-content>
